@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <h1>registration page</h1>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 400px;
+            padding: 10px;
+            background-color: white;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 10px;
+            margin: 3px 0 20px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+        input[type=submit] {
+            background-color: #7bbccb;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type=submit]:hover {
+            background-color: #8cd4d9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <label for="uname"><b>name</b></label>
+    <input type="text" placeholder="Enter name" name="name" required>
+ 
+        <label for="uname"><b>phone number </b></label>
+        <input type="text" placeholder="Enter phone number" name="phone number " required>
+     
+            <label for="uname"><b>email</b></label>
+            <input type="text" placeholder="Enter email" name="email " required>
+        <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+    <input type="submit" value="Register" onclick="register()">
+</div>
+
+<script>
+    function register() {
+        var username = document.getElementsByName('uname')[0].value;
+        var password = document.getElementsByName('psw')[0].value;
+        var repeatPassword = document.getElementsByName('psw-repeat')[0].value;
+
+        // Validate the data and check if the passwords match.
+        // This example just simulates a successful registration.
+        if (username == "test" && password == "test" && repeatPassword == "test") {
+            alert("Registration Successful!");
+        } else {
+            alert("Registration Failed. Please check your username, password, and make sure they match.");
+        }
+    }
+</script>
+
+</body>
+</html>
